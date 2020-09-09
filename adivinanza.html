@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue_juego</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo2.css" />
+</head>
+
+<body background="imagenes/fondo3.jpg" style="background-repeat: no-repeat; background-size: cover;" class="botones">
+    <div class="container-fluid" style="width: 100%;">
+        <img class="rounded-circle float-left imagen1" alt="Cinque Terre" width="9%" src="https://scontent.fcor2-2.fna.fbcdn.net/v/t1.0-9/54798163_10156292571476295_2778658701651738624_n.jpg?_nc_cat=104&_nc_sid=174925&_nc_ohc=sMr72R8-3OUAX_15aHh&_nc_ht=scontent.fcor2-2.fna&oh=7e099520a743ed824b9dfaefc7faad54&oe=5F6504BD"
+        />
+        <h1 class="text-center titulo">"Blue Maquillaje Artistico Profesional"</h1>
+    </div>
+
+    <div class="container-fluid" style="width: 100%;">
+        <table class="table table-striped" style="background-color: rgba(167, 167, 167, 0.897);">
+            <thead>
+                <tr>
+                    <th class="text-center boton1"><a href="index2.html" class="color">Inicio</a></th>
+                    <th class="text-center boton2"><a href="trabajos.html" class="color">Creaciones de Blue</a></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <p style="margin: 1%;text-align: center;" class="introJuego">
+        Prestaste atencion al comienzo?... Vamos a ver!
+    </p>
+    <p style="margin: 1%;margin-bottom: 2%; text-align: center;" class="introJuego">
+        Vas a tener 3 intentos y una pista en tu segundo intento fallido.
+    </p>
+    <script>
+        var contador = 0;
+        var intentos = 3;
+
+        function resultado() {
+
+            var radio2 = document.getElementById('radio2').checked;
+
+            if (radio2 == true) {
+                alert('Felicidades! Elegiste la opción correcta.');
+                location.href = 'index2.html';
+            } else if (intentos == 2) {
+                contador++;
+                intentos--;
+                alert('PISTA:Blue ah ganado solo 2 concursos hasta la actualidad');
+            } else {
+
+                if (intentos != 1) {
+                    contador++;
+                    intentos--;
+                    alert('Respuesta INCORRECTA te quedan ' + intentos + ' intentos!');
+                } else {
+                    {
+                        alert('Ya no tienes más intentos! :(');
+                        location.href = 'index2.html';
+                    }
+                }
+
+            }
+        }
+    </script>
+    <div class="card container juego" style="width:60%; height: 40%;background-color: cadetblue;">
+        <img class="card-img-top" src="imagenes/concurso.jpeg" alt="Card image" style="margin-top: 5%;" />
+
+        <div class="card-body">
+            <p class="card-title consigna"><strong>Segun lo que contamos al principio, ¿Que concursos a ganado Blue hasta la actualidad?</strong></p>
+            <div class="card-footer">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="opcion1" value="option1" checked>
+                    <label class="form-check-label textoLabel" for="exampleRadios1">
+                    "FaceAwards"
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="radio2" value="option2">
+                    <label class="form-check-label textoLabel" for="exampleRadios2">
+                    "Uñas Nail América","Make Up Artístico" 
+                </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="opcion3" value="option2">
+                    <label class="form-check-label textoLabel" for="exampleRadios2">
+                    "Expotatto", "Kalama"
+                </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="opcion4" value="option2">
+                    <label class="form-check-label textoLabel" for="exampleRadios2">
+                    la primer y tercera opción.
+                </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="opcion5" value="option2">
+                    <label class="form-check-label textoLabel" for="exampleRadios2">
+                    Todos.
+                </label>
+                </div>
+
+            </div>
+            <button type="button" class="btn btn-light container-fluid btn-sm" onclick="resultado()">Enviar</button>
+        </div>
+
+
+    </div>
+    </div>
+    <div class="card-footer container">
+        <p style="text-align: left; float: left; margin: 1%" class="seguir">
+            Seguinos en nuestras redes:
+        </p>
+        <a href="https://www.facebook.com/profile.php?id=753026294"><img class="imgFooter" src="https://anthoncode.com/wp-content/uploads/2019/07/logotipo-facebook.png" width="5%" height="5%" />
+        </a>
+        <a href="https://www.instagram.com/gustavocarrizo2014/"><img class="imgFooter" src="https://i.pinimg.com/originals/79/7a/fe/797afe1351677d0ad8787224e6a5be2a.png" width="5%" height="5%" />
+        </a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>
